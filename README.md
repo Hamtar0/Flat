@@ -4,6 +4,8 @@ Flat
 Theme Flat for Wordpress available here : [https://github.com/yoarts/flat](https://github.com/yoarts/flat)  
 Adapted to PluXml with agreement of the creator.
 
+![Screenshot PluXml french version](https://raw.github.com/Hamtar0/Flat/master/screenshot.jpg)
+
 To install : 
 
 1. upload the folder "flat" to your /themes directory
