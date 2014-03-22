@@ -27,6 +27,7 @@ class hamFlat extends plxPlugin {
 				$this->addHook('plxShowPagination', 'plxShowPagination');
 				$this->addHook('prevNext', 'prevNext');
 				$this->addHook('activate_thumb', 'activate_thumb');
+				$this->addHook('ThemeEndHead', 'ThemeEndHead');
     }
 	
 		public function plxShowPagination() {
@@ -104,7 +105,7 @@ class hamFlat extends plxPlugin {
 			<script type="text/javascript">
 			/* <![CDATA[ */
 			if (typeof jQuery == 'undefined') {
-				document.write('<script type="text\/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"><\/script>');
+				document.write('<script type="text\/javascript" src="<?php echo PLX_PLUGINS ?>hamFlat\/js/jquery-1.10.2.min.js"><\/script>');
 			}
 			/* ]]> */
 			</script>
