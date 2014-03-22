@@ -101,7 +101,42 @@ class hamFlat extends plxPlugin {
 			}
 		}
 		
-		public function ThemeEndHead() { ?>
+		public function ThemeEndHead() { 
+			
+			$site_title_font_family = $this->getParam('site_title_font_family');
+			$global_font_family = $this->getParam('global_font_family');
+			$heading_font_family = $this->getParam('heading_font_family');
+			$sub_heading_font_family = $this->getParam('sub_heading_font_family');
+
+			if( !empty($site_title_font_family) || !empty($global_font_family) || !empty($heading_font_family) || !empty($sub_heading_font_family) ) {
+				$font_import = '';
+				$font_style = '';
+				if( !empty($site_title_font_family) && $site_title_font_family != 'Amatic SC' ) {
+					$font_import.= '|'.$site_title_font_family;
+					$font_style.= "#masthead .site-title {font-family:".$site_title_font_family."}";
+				}
+
+				if( !empty($global_font_family) && $global_font_family != 'Roboto' ) {
+					$font_import.= '|'.$global_font_family;
+					$font_style.= "body {font-family:".$global_font_family."}";
+				}
+
+				if( !empty($heading_font_family) && $heading_font_family != 'Roboto Slab' ) {
+					$font_import.= '|'.$heading_font_family;
+					$font_style.= "h1,h2,h3,h4,h5,h6 {font-family:".$heading_font_family."}";
+				}
+
+				if( !empty($sub_heading_font_family) && $sub_heading_font_family != 'Roboto Condensed' ) {
+					$font_import.= '|'.$sub_heading_font_family;
+					$font_style.= "#masthead .site-description, .hentry .entry-meta {font-family:".$sub_heading_font_family."}";
+				}
+
+				echo str_replace('family=|', 'family=', "<link href='http://fonts.googleapis.com/css?family=".str_replace(' ', '+', $font_import)."' rel='stylesheet' type='text/css'>");
+				echo "<style type='text/css'>".$font_style."</style>";
+			}
+			
+			
+			?>
 			<script type="text/javascript">
 			/* <![CDATA[ */
 			if (typeof jQuery == 'undefined') {
