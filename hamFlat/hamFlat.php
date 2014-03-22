@@ -99,6 +99,18 @@ class hamFlat extends plxPlugin {
 				return $this->getParam('activate_thumb');
 			}
 		}
+		
+		public function ThemeEndHead() { ?>
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			if (typeof jQuery == 'undefined') {
+				document.write('<script type="text\/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"><\/script>');
+			}
+			/* ]]> */
+			</script>
+
+			<?php
+		}
 
 }
 ?>
