@@ -46,7 +46,7 @@ body.custom-background { background-image: url('<?php $plxShow->template(); ?>/a
 						<h1 class="site-title display-title"><a href="<?php $plxShow->racine(); ?>" title="<?php $plxShow->mainTitle(''); ?>" rel="home"><?php $plxShow->mainTitle(''); ?></a></h1><h2 class="site-description"><?php $plxShow->subTitle(); ?></h2>					</div>
 					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas"><i class="fa fa-gear"></i></button>
 					<button type="button" class="btn btn-link hidden-lg toggle-navigation" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
-					<nav id="site-navigation" class="navigation main-navigation navbar-collapse collapse" role="navigation">
+					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
 						<ul id="menu-main-nav" class="nav-menu"><li id="menu-item-16" class="fa fa-home menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-16"><a href="<?php $plxShow->racine() ?>">Home</a></li>
 							<?php $plxShow->staticList('','<li id="menu-item-#static_id" class="fa fa-star menu-item menu-item-type-post_type menu-item-object-page menu-item-#static_id"><a href="#static_url" class="#static_status" title="#static_name">#static_name</a></li>'); ?>
 							
